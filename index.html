@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somos IkiLab | Digital Growth Accelerated</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #000000;
+            --secondary: #FF00FF;
+            --accent: #00DD99;
+            --dark: #212529;
+            --light: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+        
+        .text-gradient {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .pivot-section {
+            background-color: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <span class="text-2xl font-bold text-gradient">Nexus</span>
+                    </div>
+                    <div class="hidden md:ml-6 md:flex md:space-x-8">
+                        <a href="#" class="nav-link text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">Home</a>
+                        <a href="#services" class="nav-link text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">Services</a>
+                        <a href="#pivot" class="nav-link text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">Our Approach</a>
+                        <a href="#about" class="nav-link text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">About</a>
+                        <a href="#contact" class="nav-link text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <a href="#contact" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white gradient-bg shadow-sm hover:opacity-90">
+                        Get Started
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="md:grid md:grid-cols-2 md:gap-12 items-center">
+                <div class="mb-8 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                        Accelerate Your Digital Growth with <span class="text-gradient">Data-Driven</span> Marketing
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8">
+                        We transform businesses through innovative marketing strategies that deliver measurable results. Our pivot-ready approach means we evolve as your needs change.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contact" class="inline-flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white gradient-bg shadow-sm hover:opacity-90">
+                            Get Started Today
+                        </a>
+                        <a href="#services" class="inline-flex justify-center items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white shadow-sm hover:bg-gray-50">
+                            Explore Services
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bcbe41dc-eeb6-4235-8517-90a8ab5e93a9.png" alt="Modern digital marketing workspace with multiple monitors showing analytics dashboards and team collaborating on strategies" class="rounded-lg shadow-xl" />
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg hidden md:block">
+                        <div class="flex items-center">
+                            <div class="p-2 rounded-full gradient-bg text-white mr-3">
+                                <i class="fas fa-chart-line text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">87%</p>
+                                <p class="text-sm text-gray-500">ROI Increase</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="py-12 bg-gray-100 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-center text-gray-500 font-medium mb-8">TRUSTED BY INNOVATIVE BRANDS</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/750a2910-8d29-48af-ad64-de70738764f5.png" alt="Company logo of tech startup named InnovateX with modern typography" class="h-12 object-contain opacity-70 hover:opacity-100 transition" />
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/311f58bf-5b54-4f06-a308-c47d2d55bdd9.png" alt="Company logo of digital agency named Pixel Perfect with abstract shape" class="h-12 object-contain opacity-70 hover:opacity-100 transition" />
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/010f744e-34a0-49b7-b636-06cc722ec8d5.png" alt="Company logo of ecommerce brand named ShopWise with shopping bag icon" class="h-12 object-contain opacity-70 hover:opacity-100 transition" />
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/250850b2-5f72-4fc3-9228-9cb38014e644.png" alt="Company logo of SaaS company named Cloudly with cloud-based icon" class="h-12 object-contain opacity-70 hover:opacity-100 transition" />
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e55d32c2-7c94-4560-aac3-ba7b984c7a0b.png" alt="Company logo of financial service named WealthPath with upward trending line" class="h-12 object-contain opacity-70 hover:opacity-100 transition" />
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/80c47f51-8aea-4d44-a425-9482b0742b1f.png" alt="Company logo of healthcare tech named VitalCare with heart pulse icon" class="h-12 object-contain opacity-70 hover:opacity-100 transition" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our <span class="text-gradient">Core Services</span></h2>
+                <p class="max-w-2xl mx-auto text-gray-600">
+                    We offer comprehensive marketing solutions designed to scale with your business.
+                    Each service can be pivoted or expanded based on your changing needs.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-lg p-6 shadow-md transition duration-300 ease-in-out">
+                    <div class="w-14 h-14 gradient-bg text-white rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-search-dollar text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Performance Marketing</h3>
+                    <p class="text-gray-600 mb-4">
+                        Data-driven campaigns across all channels to maximize ROI and customer acquisition.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Paid social & search</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Conversion optimization</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">ROI tracking & analytics</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-flex items-center text-gradient font-medium">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-lg p-6 shadow-md transition duration-300 ease-in-out">
+                    <div class="w-14 h-14 gradient-bg text-white rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-bullhorn text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Brand Strategy</h3>
+                    <p class="text-gray-600 mb-4">
+                        Craft compelling narratives and visual identities that resonate with your audience.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Positioning & messaging</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Visual identity design</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Competitive differentiation</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-flex items-center text-gradient font-medium">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-lg p-6 shadow-md transition duration-300 ease-in-out">
+                    <div class="w-14 h-14 gradient-bg text-white rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Content & Community</h3>
+                    <p class="text-gray-600 mb-4">
+                        Build authentic connections through strategic content and community engagement.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Content strategy</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Social media management</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Influencer partnerships</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-flex items-center text-gradient font-medium">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-lg p-6 shadow-md transition duration-300 ease-in-out">
+                    <div class="w-14 h-14 gradient-bg text-white rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-robot text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Marketing Automation</h3>
+                    <p class="text-gray-600 mb-4">
+                        Leverage technology to scale your marketing efforts efficiently.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Email workflows</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">CRM integration</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Lead nurturing</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-flex items-center text-gradient font-medium">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-lg p-6 shadow-md transition duration-300 ease-in-out">
+                    <div class="w-14 h-14 gradient-bg text-white rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-globe text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Web & Digital Experience</h3>
+                    <p class="text-gray-600 mb-4">
+                        Create seamless digital experiences that convert visitors into customers.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Website design & development</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">UX/UI optimization</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Conversion rate optimization</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-flex items-center text-gradient font-medium">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-lg p-6 shadow-md transition duration-300 ease-in-out">
+                    <div class="w-14 h-14 gradient-bg text-white rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-pie text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Analytics & Insights</h3>
+                    <p class="text-gray-600 mb-4">
+                        Turn data into actionable strategies with our comprehensive analytics services.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Performance dashboards</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Customer journey mapping</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">A/B testing framework</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-flex items-center text-gradient font-medium">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pivot Section -->
+    <section id="pivot" class="py-16 px-4 sm:px-6 lg:px-8 pivot-section">
+        <div class="max-w-7xl mx-auto">
+            <div class="md:grid md:grid-cols-2 md:gap-12 items-center">
+                <div class="mb-8 md:mb-0">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Our <span class="text-gradient">Adaptive Approach</span></h2>
+                    <p class="text-gray-600 mb-6">
+                        In today's fast-changing digital landscape, flexibility is key. Our pivot-ready methodology means we can rapidly shift strategies as market conditions or your business needs evolve.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-8 h-8 rounded-full gradient-bg flex items-center justify-center">
+                                    <i class="fas fa-sync-alt text-white"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold text-gray-900">Agile Campaign Management</h4>
+                                <p class="mt-1 text-gray-600">
+                                    Weekly performance reviews and monthly strategy pivots ensure we're always optimizing.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-8 h-8 rounded-full gradient-bg flex items-center justify-center">
+                                    <i class="fas fa-chart-line text-white"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold text-gray-900">Data-Informed Decisions</h4>
+                                <p class="mt-1 text-gray-600">
+                                    Real-time analytics guide our pivots, not hunches or assumptions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-8 h-8 rounded-full gradient-bg flex items-center justify-center">
+                                    <i class="fas fa-random text-white"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold text-gray-900">Modular Service Packages</h4>
+                                <p class="mt-1 text-gray-600">
+                                    Add, remove, or adjust services as your priorities change with our flexible engagement models.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1785e894-7358-4483-ab93-0a5c08f1e18c.png" alt="Infographic showing our pivot process from strategy to execution with cycle arrows" class="rounded-lg shadow-xl" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Pivot <span class="text-gradient">Success Stories</span></h2>
+                <p class="max-w-2xl mx-auto text-gray-600">
+                    See how we've helped clients adapt their marketing strategies to changing market conditions.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Case Study 1 -->
+                <div class="testimonial-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2f2857bc-6622-48cc-9de8-487345c7b299.png" alt="Before/after comparison of ecommerce website with improved conversion funnel" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4c23cd4e-20a9-45d5-9e75-57a0a905ff7f.png" alt="Headshot of Sarah Johnson, Director of Marketing at ShopWise" class="w-12 h-12 rounded-full" />
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-900">ShopWise</h4>
+                                <p class="text-sm text-gray-600">Ecommerce</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            "When supply chain issues forced us to shift from physical products to digital offerings, Nexus rapidly redesigned our marketing strategy."
+                        </p>
+                        <div class="flex items-center">
+                            <span class="text-yellow-400 mr-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <span class="text-sm text-gray-600 ml-1">5.0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case Study 2 -->
+                <div class="testimonial-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/430b9c96-6544-4114-92a1-b8001ac8166c.png" alt="Mobile app screenshots showing improved user onboarding flow" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/06450552-4aa2-416a-8694-0479ae12191c.png" alt="Headshot of Michael Chen, CEO of Finova Financial" class="w-12 h-12 rounded-full" />
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-900">Finova</h4>
+                                <p class="text-sm text-gray-600">Fintech</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            "After regulatory changes impacted our core offering, Nexus helped us pivot our messaging within 2 weeks to focus on new compliance features."
+                        </p>
+                        <div class="flex items-center">
+                            <span class="text-yellow-400 mr-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <span class="text-sm text-gray-600 ml-1">5.0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case Study 3 -->
+                <div class="testimonial-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/724d5368-abc2-4944-a5d5-a2c8a2ad44ca.png" alt="Dashboard showing customer engagement metrics before and after pivot" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e91ce493-fc01-4edc-8839-9961e86d5526.png" alt="Headshot of Alicia Rodriguez, CMO of EduPath" class="w-12 h-12 rounded-full" />
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-900">EduPath</h4>
+                                <p class="text-sm text-gray-600">Education</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            "Changing from B2C to B2B required a complete messaging overhaul. Nexus made the transition seamless with minimal customer disruption."
+                        </p>
+                        <div class="flex items-center">
+                            <span class="text-yellow-400 mr-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </span>
+                            <span class="text-sm text-gray-600 ml-1">4.7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white gradient-bg hover:opacity-90">
+                    Share Your Challenge With Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="md:grid md:grid-cols-12 md:gap-12">
+                <div class="md:col-span-5 mb-8 md:mb-0">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c872153a-593d-4e71-bafe-8f0444da3cc8.png" alt="Nexus Marketing team working collaboratively in a bright modern office space" class="rounded-lg shadow-xl" />
+                </div>
+                <div class="md:col-span-7">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Why <span class="text-gradient">Choose IkiLab</span></h2>
+                    <p class="text-gray-600 mb-6">
+                        IkiLab represents innovation through simplicity. We merge minimalist elegance with cutting-edge digital strategies to deliver impactful results.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white text-xl">
+                                    1
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-gray-900">Pivot-Ready Teams</h3>
+                                <p class="mt-1 text-gray-600">
+                                    Our specialists are trained in multiple disciplines, allowing seamless shifts between strategies.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white text-xl">
+                                    2
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-gray-900">Modular Technology Stack</h3>
+                                <p class="mt-1 text-gray-600">
+                                    Our infrastructure allows quick integration of new tools as your needs evolve.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white text-xl">
+                                    3
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-gray-900">Flexible Engagement Models</h3>
+                                <p class="mt-1 text-gray-600">
+                                    Scale services up or down without penalty as your business priorities shift.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 flex space-x-4">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold gradient-text">87%</div>
+                            <div class="text-gray-600 mt-1">Client Retention</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold gradient-text">4.9/5</div>
+                            <div class="text-gray-600 mt-1">Avg. Rating</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold gradient-text">250+</div>
+                            <div class="text-gray-600 mt-1">Projects</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 gradient-bg">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">Ready to Accelerate Your Growth With Data-Driven Marketing?</h2>
+            <p class="text-lg text-white opacity-90 mb-8">
+                Whether you need a complete strategy overhaul or just want to optimize your current approach, our team is ready to help.
+            </p>
+            <a href="#contact" class="inline-flex items-center px-8 py-3 border border-transparent text-lg font-medium rounded-md text-gray-900 bg-white shadow-lg hover:bg-gray-100">
+                Get Started Now <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Let's <span class="text-gradient">Connect</span></h2>
+                <p class="max-w-2xl mx-auto text-gray-600">
+                    Have questions about our services or ready to start a project? Reach out and we'll respond within 24 hours.
+                </p>
+            </div>
+            
+            <div class="md:grid md:grid-cols-2 md:gap-12">
+                <div class="mb-8 md:mb-0">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                            <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 py-3 px-4 border" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 py-3 px-4 border" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700">Phone (Optional)</label>
+                            <input type="tel" id="phone" name="phone" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 py-3 px-4 border">
+                        </div>
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-gray-700">Service Interest</label>
+                            <select id="service" name="service" class="mt-1 block w-full rounded-md border-gray-300 py-3 px-4 border focus:border-indigo-500 focus:ring-indigo-500">
+                                <option value="">Select a service</option>
+                                <option value="performance-marketing">Performance Marketing</option>
+                                <option value="brand-strategy">Brand Strategy</option>
+                                <option value="content-community">Content & Community</option>
+                                <option value="marketing-automation">Marketing Automation</option>
+                                <option value="web-experience">Web & Digital Experience</option>
+                                <option value="analytics">Analytics & Insights</option>
+                                <option value="not-sure">Not Sure - Need Consultation</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 py-3 px-4 border"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white gradient-bg hover:opacity-90">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    <div class="bg-gray-50 p-6 rounded-lg h-full">
+                        <h3 class="text-lg font-medium text-gray-900 mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-gray-400 mt-1"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-gray-500">123 Digital Avenue</p>
+                                    <p class="text-sm text-gray-500">San Francisco, CA 94103</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-phone-alt text-gray-400 mt-1"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-gray-500">+1 (555) 123-4567</p>
+                                    <p class="text-sm text-gray-500">Mon-Fri, 9am-5pm PST</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-envelope text-gray-400 mt-1"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-gray-500">hello@ikilab.com</p>
+                                    <p class="text-sm text-gray-500">Support available 24/7</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h3 class="text-lg font-medium text-gray-900 mb-4">Follow Us</h3>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:text-white hover:bg-[#3b5998] transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:text-white hover:bg-[#1da1f2] transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:text-white hover:bg-[#0077b5] transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:text-white hover:bg-[#e1306c] transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="md:grid md:grid-cols-3 md:gap-8">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center">
+                        <span class="text-2xl font-bold gradient-text">Nexus</span>
+                    </div>
+                    <p class="mt-4 text-gray-400 text-sm">
+                        Dynamic marketing solutions designed for the modern digital landscape.
+                    </p>
+                    <p class="mt-8 text-gray-400 text-sm">
+                        © 2023 Somos IkiLab. All rights reserved.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-300 uppercase tracking-wider">Services</h3>
+                        <ul class="mt-4 space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white text-sm">Performance Marketing</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white text-sm">Brand Strategy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white text-sm">Content Marketing</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white text-sm">Marketing Automation</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-300 uppercase tracking-wider">Company</h3>
+                        <ul class="mt-4 space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white text-sm">About</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white text-sm">Careers</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white text-sm">Blog</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white text-sm">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-8 md:mt-0">
+                    <h3 class="text-sm font-semibold text-gray-300 uppercase tracking-wider">Subscribe to Newsletter</h3>
+                    <p class="mt-4 text-gray-400 text-sm">
+                        Get the latest marketing insights and pivot strategies delivered to your inbox.
+                    </p>
+                    <form class="mt-4 flex">
+                        <input type="email" placeholder="Your email" class="flex-1 px-4 py-2 rounded-l-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-white">
+                        <button type="submit" class="px-4 py-2 rounded-r-md gradient-bg text-white font-medium hover:opacity-90">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Cookie Policy</a>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <p class="text-gray-400 text-sm text-center md:text-right">
+                        Designed with passion in San Francisco
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-button').addEventListener('click', function() {
+            const menu = document.querySelector('.md\\:hidden .md\\:flex');
+            if (menu) {
+                menu.classList.toggle('hidden');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
+
